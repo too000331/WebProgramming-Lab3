@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+    
+    
+ }
+ 
+ body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-image: url(https://eskipaper.com/images/minimalist-wallpaper-34.jpg);
+    background-repeat: no-repeat;
+ }
+ 
+ .container {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+ }
+ 
+ .nottodo_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 32px;
+    background-color:darkslategray;
+ }
+ 
+ .nottodo_title {
+    font-size: 2.5rem;
+ }
+ 
+ .nottodo_div {
+    display: flex;
+    margin-top: 16px;
+ }
+ 
+ .nottodo_input {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    outline: none;
+ }
+ 
+ .nottodo_btn {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    border-radius: 0 4px 4px 0;
+    border: none;
+    outline: none;
+    background-color: rgb(170, 194, 216);
+    cursor: pointer;
+    transition: 0.3s ease all;
+ }
+ 
+ .nottodo_btn:hover {
+    background-color: rgb(100, 136, 168);
+ }
+  
+ .nottodo_container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 16px;
+    background-color: darkslategray;
+ }
+ 
+ .nottodo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgb(228, 203, 171);
+ }
+ 
+ .nottodo:last-child { 
+    border: none;
+ }
+ 
+ .nottodo_left {
+    position: relative;
+    display: flex;
+    align-items: center;
+ }
+ 
+ .nottodo_editInput {
+    position: absolute;
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+ }
+ 
+ .nottodo_text, .nottodo_edit {
+    margin-left: 8px;
+ }
+ 
+ .nottodo_cb:checked ~ .nottodo_text {
+    text-decoration: line-through;
+    color: rgb(46, 45, 45);
+ }
+ 
+ .nottodo_right {
+    position: relative;
+ }
+ 
+ .nottodo_delete {
+    background-color:firebrick;
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    color: white;
+    border-radius: 4px 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease all;
+ }
+ 
+ .nottodo_delete:hover {
+    background-color: rgb(175, 45, 22);
+ }
+ 
+ .nottodo_edit {
+    background-color:forestgreen;
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    color: white;
+    border-radius: 4px 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease all;
+ }
+ 
+ .nottodo_edit:hover {
+    background-color: rgb(12, 78, 34);
+ }
+ 
+ .nottodo_save {
+    position: absolute;
+    right: 0;
+    background-color: rgb(41, 133, 185);
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    color: white;
+    border-radius: 4px 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    opacity: 0;
+    pointer-events: none;
+ }
+ 
+ .nottodo_save:hover {
+    background-color: rgb(65, 147, 194);
+ }
+ 
+ .nottodo.-edited .nottodo_left *, .nottodo.-edited .nottodo_right * {
+    opacity: 0;
+    pointer-events: none;
+ }
+ 
+ .nottodo.-edited .nottodo_left .nottodo_editInput, .nottodo.-edited .nottodo_right .nottodo_save {
+    opacity: 1;
+    pointer-events: all;
+ }
